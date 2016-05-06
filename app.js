@@ -20,7 +20,7 @@ page.open(address, function (status) {
           width: clip.width,
           height: clip.height
         }
-        page.render("output" + i + ".png")
+        page.render("output-" + i + ".png")
       } catch (e) {
         console.log(e);
         console.log(e.stack);
