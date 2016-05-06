@@ -5,7 +5,7 @@ page.open(address, function (status) {
   console.log(status);
   setTimeout(function () {
     var clipRects = page.evaluate(function () {
-      return [].map.call(document.querySelectorAll(".highlight"), function (d) {
+      return [].map.call(document.querySelectorAll("pre"), function (d) {
         return d.getBoundingClientRect()
       })
     });
@@ -20,7 +20,7 @@ page.open(address, function (status) {
           width: clip.width,
           height: clip.height
         }
-        page.render("output-" + i + ".png")
+        page.render("images/readme-" + i + ".png")
       } catch (e) {
         console.log(e);
         console.log(e.stack);
