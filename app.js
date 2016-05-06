@@ -1,11 +1,11 @@
-var page = new WebPage(), address, output, size
-address = "https://github.com/ga-wdi-lessons/activerecord-intro"
+var page = new WebPage(), address
+address = "https://github.com/ga-wdi-lessons/activerecord-intro" // set url to crawl
 page.open(address, function (status) {
-  // no error checking
+  // no error checking...yet
   console.log(status);
   setTimeout(function () {
     var clipRects = page.evaluate(function () {
-      return [].map.call(document.querySelectorAll("pre"), function (d) {
+      return [].map.call(document.querySelectorAll("pre"), function (d) { // grab all pre elements
         return d.getBoundingClientRect()
       })
     });
@@ -20,9 +20,8 @@ page.open(address, function (status) {
           width: clip.width,
           height: clip.height
         }
-        page.render("images/readme-" + i + ".png")
+        page.render("images/readme-" + i + ".png") // file to output
       } catch (e) {
-        console.log(e);
         console.log(e.stack);
       }
     }

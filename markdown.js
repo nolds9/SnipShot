@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 var fs = require('fs')
 
+// pass file to parse
 fs.readFile('readme.md', 'utf8', function(err, res){
   var lines = res.split('\n')
   var newFile = ""
