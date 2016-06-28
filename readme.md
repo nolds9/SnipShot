@@ -1,4 +1,4 @@
-# CodeShot
+# SnipShot
 
 A CLI app to replace markdown code snippets with screenshots
 
