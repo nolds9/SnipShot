@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 var fs = require('fs')
-
+if (process.argv.length > 2) var file = process.argv[2]
 // pass file to parse
-fs.readFile('readme.md', 'utf8', function(err, res){
+fs.readFile(file || "readme.md", 'utf8', function(err, res){
   var lines = res.split('\n')
   var newFile = ""
   var incode = false

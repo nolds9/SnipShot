@@ -1,5 +1,7 @@
+var system = require('system');
+var args = system.args;
 var page = new WebPage(), address
-address = "https://github.com/ga-wdi-lessons/activerecord-intro" // set url to crawl
+address = "" + args[1] // set url to crawl
 page.open(address, function (status) {
   // no error checking...yet
   console.log(status);
