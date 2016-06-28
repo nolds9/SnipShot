@@ -5,9 +5,9 @@ A CLI app to replace markdown code snippets with screenshots
 ## CLI Usage
 > **Note**: Requires [PhantomJS](http://phantomjs.org/) to be installed.
 If you're using OSX and have Homebrew installed, this can be done with
-`$brew install phantomjs`
+`$ brew install phantomjs`
 
-To use, run the following scripts from the root directory of any lesson:
+To use, run the following scripts from the root directory of any markdown file to parse:
 
 First, pass the url to the markdown file you want to crawl..
 
